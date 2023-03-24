@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin gridCenter() {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    width: 100vw;
+    @include flexCenter();
+}
+
+input {
+    font-size: 32px;
+}
+
+#add {
+    display: block;
+    text-align: center;
+    border: 1px solid;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+#add:active {
+    background: black;
+    color: white;
+}
+
+// table {
+//     @include gridCenter();
+
+// }
+
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: 10rem;
+    text-align: center;
+}
