@@ -7,7 +7,9 @@ const span = document.querySelector('span')
 
 const list = []
 span.addEventListener('click', () => {
-  list.push(+input.value) //if not number,input.value = NaN
+  if (input.value !== '') {
+    list.push(+input.value) //if not number,input.value = NaN
+  }
   input.value = ''
   const sortedList = sortList(list)
 
